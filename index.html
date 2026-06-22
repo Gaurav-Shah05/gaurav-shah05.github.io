@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gaurav Shah</title>
+  <meta name="description" content="Personal site of Gaurav Shah. Coming soon." />
+  <style>
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      background: #f5efe1;
+      color: #1a1a1a;
+      font-family: Menlo, Consolas, "Courier New", monospace;
+      min-height: 100vh;
+      padding: 10vh 2rem 2rem;
+      text-align: left;
+      line-height: 2;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+    }
+    .wrap { width: min(92%, 64rem); }
+    .box {
+      border: 1px solid #3a342a;
+      padding: 2.5rem 3rem;
+      width: 100%;
+      box-sizing: border-box;
+      font-size: 1.05rem;
+    }
+    h1 { font-size: 1.9rem; font-weight: bold; margin: 0 0 1.5rem; }
+    p { margin: 0.85rem 0; }
+    a { color: #111111; }
+    .counter {
+      position: fixed;
+      bottom: 1rem;
+      left: 2rem;
+      font-size: 0.8rem;
+      color: #777777;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Gaurav Shah</h1>
+    <div class="box">
+      <p>Even Odin hung nine nights for his wisdom; this page is taking a few more weekends.</p>
+      <p>Until then, as the old poets say, a guest must depart on their way.</p>
+      <p>The road, for now, leads to <a href="https://www.linkedin.com/in/gaurav-shah05/">LinkedIn</a>.</p>
+    </div>
+  </div>
+
+  <a class="counter" href="https://www.linkedin.com/in/gaurav-shah05/">Redirecting you in <span id="count">15</span> sec...</a>
+
+  <script>
+    var url = "https://www.linkedin.com/in/gaurav-shah05/";
+    var n = 15;
+    var el = document.getElementById("count");
+    var timer = setInterval(function () {
+      n -= 1;
+      el.textContent = n;
+      if (n <= 0) {
+        clearInterval(timer);
+        window.location.href = url;
+      }
+    }, 1000);
+  </script>
+</body>
+</html>
